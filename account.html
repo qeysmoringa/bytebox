@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self'; img-src 'self' data:; connect-src 'self' https://qtrqkygwkjwblkztrmcu.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'" />
+<meta name="referrer" content="same-origin" />
+<title>Your account | ByteBox</title>
+<link rel="stylesheet" href="bytebox-theme.css" />
+</head>
+<body data-page="account">
+<header id="site-header"></header>
+<main><section class="page"><div class="container">
+<h2>Your account</h2>
+<p class="meta"><span id="acct-name"></span> &middot; <span id="acct-email"></span></p>
+<div id="msg"></div>
+<h3>Two-step verification</h3>
+<div id="twofa"><p>Loading...</p></div>
+<h3 class="gap-top">Change password</h3>
+<form id="pw-form" class="card-form">
+  <label for="current">Current password</label>
+  <input id="current" name="current" type="password" required maxlength="72" autocomplete="current-password">
+  <label for="new">New password</label>
+  <input id="new" name="password" type="password" required minlength="12" maxlength="72" autocomplete="new-password">
+  <p class="hint">12+ characters with upper and lower case, a number and a symbol.</p>
+  <label for="conf">Confirm new password</label>
+  <input id="conf" name="confirm" type="password" required maxlength="72" autocomplete="new-password">
+  <button type="submit">Change password</button>
+</form>
+</div></section></main>
+<footer><p>&copy; 2026 ByteBox. All rights reserved.</p></footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

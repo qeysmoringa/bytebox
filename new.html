@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self'; img-src 'self' data:; connect-src 'self' https://qtrqkygwkjwblkztrmcu.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'" />
+<meta name="referrer" content="same-origin" />
+<title>Start a discussion | ByteBox</title>
+<link rel="stylesheet" href="bytebox-theme.css" />
+</head>
+<body data-page="newthread">
+<header id="site-header"></header>
+<main><section class="page"><div class="container">
+<h2>Start a discussion</h2>
+<div id="msg"></div>
+<form id="thread-form" class="card-form">
+  <label for="title">Title</label>
+  <input id="title" name="title" required minlength="5" maxlength="120">
+  <label for="body">Your question or topic</label>
+  <textarea id="body" name="body" rows="9" required minlength="10" maxlength="5000"></textarea>
+  <p class="hint">To share code, put it between three backticks on their own lines: ``` your code ```</p>
+  <button type="submit">Post</button>
+</form>
+</div></section></main>
+<footer><p>&copy; 2026 ByteBox. All rights reserved.</p></footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self'; img-src 'self' data:; connect-src 'self' https://qtrqkygwkjwblkztrmcu.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'" />
+<meta name="referrer" content="same-origin" />
+<title>Sign up | ByteBox</title>
+<link rel="stylesheet" href="bytebox-theme.css" />
+</head>
+<body data-page="signup">
+<header id="site-header"></header>
+<main><section class="page"><div class="container">
+<h2>Create your account</h2>
+<div id="msg"></div>
+<form id="signup-form" class="card-form" autocomplete="on">
+  <label for="username">Username</label>
+  <input id="username" name="username" required minlength="3" maxlength="20" pattern="[A-Za-z0-9_]+" autocomplete="username">
+  <p class="hint">3-20 characters: letters, numbers, underscore.</p>
+  <label for="email">Email</label>
+  <input id="email" name="email" type="email" required maxlength="254" autocomplete="email">
+  <label for="password">Password</label>
+  <input id="password" name="password" type="password" required minlength="12" maxlength="72" autocomplete="new-password">
+  <p class="hint">12+ characters with upper and lower case, a number and a symbol.</p>
+  <label for="confirm">Confirm password</label>
+  <input id="confirm" name="confirm" type="password" required maxlength="72" autocomplete="new-password">
+  <button type="submit">Sign up</button>
+</form>
+<p>Already a member? <a href="login.html">Log in</a></p>
+</div></section></main>
+<footer><p>&copy; 2026 ByteBox. All rights reserved.</p></footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

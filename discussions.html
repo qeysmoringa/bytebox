@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self'; img-src 'self' data:; connect-src 'self' https://qtrqkygwkjwblkztrmcu.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'" />
+<meta name="referrer" content="same-origin" />
+<title>Discussions | ByteBox</title>
+<link rel="stylesheet" href="bytebox-theme.css" />
+</head>
+<body data-page="discussions">
+<header id="site-header"></header>
+<main><section class="page"><div class="container">
+<h2>Discussions</h2>
+<form class="search" method="get" action="discussions.html">
+  <input id="q" name="q" placeholder="Search discussions" maxlength="60" aria-label="Search discussions">
+  <button type="submit">Search</button>
+</form>
+<p><a id="new-btn" class="btn" href="new.html" hidden>Start a discussion</a><span id="login-hint" hidden><a href="login.html">Log in</a> to start a discussion.</span></p>
+<div id="list"><p>Loading...</p></div>
+<div id="pager" class="pager"></div>
+</div></section></main>
+<footer><p>&copy; 2026 ByteBox. All rights reserved.</p></footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self'; img-src 'self' data:; connect-src 'self' https://qtrqkygwkjwblkztrmcu.supabase.co; base-uri 'self'; form-action 'self'; object-src 'none'" />
+<meta name="referrer" content="same-origin" />
+<title>Choose a new password | ByteBox</title>
+<link rel="stylesheet" href="bytebox-theme.css" />
+</head>
+<body data-page="reset">
+<header id="site-header"></header>
+<main><section class="page"><div class="container">
+<h2>Choose a new password</h2>
+<div id="msg"></div>
+<p id="reset-wait">Checking your reset link...</p>
+<form id="reset-form" class="card-form" hidden>
+  <label for="password">New password</label>
+  <input id="password" name="password" type="password" required minlength="12" maxlength="72" autocomplete="new-password">
+  <p class="hint">12+ characters with upper and lower case, a number and a symbol.</p>
+  <label for="confirm">Confirm new password</label>
+  <input id="confirm" name="confirm" type="password" required maxlength="72" autocomplete="new-password">
+  <button type="submit">Change password</button>
+</form>
+</div></section></main>
+<footer><p>&copy; 2026 ByteBox. All rights reserved.</p></footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
